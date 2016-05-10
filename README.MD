@@ -6,9 +6,23 @@ An ios7 style chat bubble,based on angularjs &amp; sass.
 + html part:
 ```html
 
-<chat-bubble bubble-type="left">Testbubble</chat-bubble>
-<chat-bubble bubble-type="right">RighbBubble</chat-bubble>
+<div class="container">
 
+  <chat-bubble bubble-type="left">Hey there! What's up?</chat-bubble>
+  <div class="clear"></div>
+  <chat-bubble bubble-type="right">Checking out iOS7 you know..</chat-bubble>
+  <div class="clear"></div>
+  <chat-bubble bubble-type="left">Check out this bubble!</chat-bubble>
+  <div class="clear"></div>
+  <chat-bubble bubble-type="right">It's pretty cool!</chat-bubble>
+  <div class="clear"></div>
+  <chat-bubble bubble-type="left">我想试试中文的效果如何?</chat-bubble>
+  <div class="clear"></div>
+  <chat-bubble bubble-type="right" css-class="testCls">如果是大段大段的中文呢?如果是大段大段的中文呢?如果是大段大段的中文呢?如果是大段大段的中文呢?如果是大段大段的中文呢?</chat-bubble>
+  <div class="clear"></div>
+  <chat-bubble bubble-type="left">效果还是不错哦!</chat-bubble>
+
+</div>
 ```
 
 + javascript part:
