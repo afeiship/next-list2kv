@@ -11,10 +11,14 @@
       font-family: 'STHeiti', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
     }
+    .clear{
+      clear: both;
+    }
   </style>
 </head>
 <body ng-controller="MainCtrl">
 <chat-bubble bubble-type="left">Testbubble</chat-bubble>
+<div class="clear"></div>
 <chat-bubble bubble-type="right">RighbBubble</chat-bubble>
 <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="../dist/js/angular-chat-bubble.js"></script>

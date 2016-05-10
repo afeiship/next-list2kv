@@ -1,69 +1,64 @@
 /**chat-bubble Start**/
-.ng-widget-chat-bubble {
-  &[data-bubble-type='left'] {
-    position: relative;
-    padding: 10px 20px;
-    color: white;
-    background: #0B93F6;
-    border-radius: 25px;
-    float: right;
+@import "variables";
 
+.ng-widget-chat-bubble {
+  position: relative;
+  padding: $padding;
+  border-radius: $border-radius;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 20px;
+    transform: translate(0, -2px);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 26px;
+    height: 20px;
+    background: $body-bg-color;
+    -webkit-transform: translate(-30px, -2px);
+  }
+
+  &[data-bubble-type='left'] {
+    color: $body-bg-color;
+    background: $primary-bg-color;
+    float: right;
     &:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      bottom: -2px;
       right: -7px;
-      height: 20px;
-      border-right: 20px solid #0B93F6;
+      z-index: -1;
+      border-right: 20px solid $primary-bg-color;
       border-bottom-left-radius: 16px 14px;
-      -webkit-transform: translate(0, -2px);
     }
 
     &:after {
-      content: "";
-      position: absolute;
       z-index: 1;
-      bottom: -2px;
       right: -56px;
-      width: 26px;
-      height: 20px;
-      background: white;
       border-bottom-left-radius: 10px;
-      -webkit-transform: translate(-30px, -2px);
     }
   }
   &[data-bubble-type='right'] {
     position: relative;
-    padding: 10px 20px;
-    background: #E5E5EA;
-    border-radius: 25px;
+    padding: $padding;
+    background: $secondary-bg-color;
     color: black;
     float: left;
 
     &:before {
-      content: "";
-      position: absolute;
-      z-index: 2;
-      bottom: -2px;
       left: -7px;
-      height: 20px;
-      border-left: 20px solid #E5E5EA;
+      z-index: 2;
+      border-left: 20px solid $secondary-bg-color;
       border-bottom-right-radius: 16px 14px;
-      -webkit-transform: translate(0, -2px);
     }
 
     &:after {
-      content: "";
-      position: absolute;
       z-index: 3;
-      bottom: -2px;
       left: 4px;
-      width: 26px;
-      height: 20px;
-      background: white;
       border-bottom-right-radius: 10px;
-      -webkit-transform: translate(-30px, -2px);
     }
   }
 }
