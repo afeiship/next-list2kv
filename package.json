@@ -1,0 +1,15 @@
+{
+  "name": "angular-chat-bubble",
+  "version": "0.0.0",
+  "description": "An ios7 style chat bubble,based on angularjs &amp; sass.",
+  "homepage": "https://github.com/afeiship/angular-chat-bubble",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.0"
+  }
+}
