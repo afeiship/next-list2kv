@@ -27,8 +27,7 @@ var config = {
 
 var scripts = [
   './src/angular/main.js',
-  './src/angular/directive/toast.js',
-  './src/angular/service/toast.js'
+  './src/angular/directive/chat-bubble.js'
 ];
 
 
@@ -37,7 +36,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('sass', function () {
-  return gulp.src(config.src + '/sass/toast.scss')
+  return gulp.src(config.src + '/sass/chat-bubble.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(config.sassOptions).on('error', sass.logError))
     .pipe(autoprefixer('last 2 version'))
@@ -54,7 +53,7 @@ gulp.task('sass', function () {
 
 gulp.task('scripts', function () {
   return gulp.src(scripts)
-    .pipe(concat('angular-toast.js'))
+    .pipe(concat('angular-chat-bubble.js'))
     .pipe(gulp.dest('dist/js'))
     .pipe(uglify())
     .pipe(rename({

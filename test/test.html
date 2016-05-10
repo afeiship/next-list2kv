@@ -19,14 +19,9 @@
 <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="../dist/js/angular-chat-bubble.js"></script>
 <script type="text/javascript">
-  var TestModule = angular.module('TestApp', ['toast'])
-    .controller('MainCtrl', function ($scope, ngToast) {
-      $scope.show = function () {
-        ngToast.show({
-          cssClass:'customizeClass',
-          msg: '<b>v</b>asfdjsldafj<em style="color:#f00;">I am safed</em>!'
-        });
-      };
+  var TestModule = angular.module('TestApp', ['chat-bubble'])
+    .controller('MainCtrl', function ($scope) {
+      console.log('initial main ctrl!');
     });
 </script>
 </body>
