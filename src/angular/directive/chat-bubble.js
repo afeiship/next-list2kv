@@ -1,5 +1,8 @@
-ChatBubbleModule
-  .directive('chatBubble', [function () {
+(function () {
+  'use strict';
+
+  angular.module('nx.widget')
+    .directive('chatBubble', [function () {
     return {
       restrict: 'E',
       transclude: true,
@@ -10,3 +13,5 @@ ChatBubbleModule
       }
     };
   }]);
+
+})();
