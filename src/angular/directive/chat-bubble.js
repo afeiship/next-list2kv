@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('nx.widget')
-    .directive('chatBubble', [function () {
+    .directive('nxChatBubble', [function () {
     return {
       restrict: 'E',
       transclude: true,

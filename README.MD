@@ -28,7 +28,7 @@ An ios7 style chat bubble,based on angularjs &amp; sass.
 + javascript part:
 ```javascript
 
-var TestModule = angular.module('TestApp', ['chat-bubble'])
+var TestModule = angular.module('TestApp', ['nx.widget'])
     .controller('MainCtrl', function ($scope) {
       console.log('initial main ctrl!');
     });
