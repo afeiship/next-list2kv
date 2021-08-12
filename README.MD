@@ -1,47 +1,61 @@
-#angular-chat-bubble
-An ios7 style chat bubble,based on angularjs && sass.
+# next-list2kv
+> Transform pure list to key value pairs.
 
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
 
-##usage:
-+ html part:
-```html
-
-<div class="container">
-
-  <nx-chat-bubble bubble-type="left">Hey there! What's up?</nx-chat-bubble>
-    <div class="clear"></div>
-    <nx-chat-bubble bubble-type="right">Checking out iOS7 you know..</nx-chat-bubble>
-    <div class="clear"></div>
-    <nx-chat-bubble bubble-type="left">Check out this bubble!</nx-chat-bubble>
-    <div class="clear"></div>
-    <nx-chat-bubble bubble-type="right">It's pretty cool!</nx-chat-bubble>
-    <div class="clear"></div>
-    <nx-chat-bubble bubble-type="left">我想试试中文的效果如何?</nx-chat-bubble>
-    <div class="clear"></div>
-    <nx-chat-bubble bubble-type="right" css-class="testCls">如果是大段大段的中文呢?如果是大段大段的中文呢?如果是大段大段的中文呢?如果是大段大段的中文呢?如果是大段大段的中文呢?</nx-chat-bubble>
-    <div class="clear"></div>
-    <nx-chat-bubble bubble-type="left">效果还是不错哦!</nx-chat-bubble>
-
-</div>
+## installation
+```bash
+npm install -S @jswork/next-list2kv
 ```
 
-+ javascript part:
-```javascript
+## usage
+```js
+import '@jswork/next-list2kv';
 
-var TestModule = angular.module('TestApp', ['nx.widget'])
-    .controller('MainCtrl', function ($scope) {
-      console.log('initial main ctrl!');
-    });
+const list1 = ['a', 'b', 'c'];
+const res1 = nx.list2kv(list1);
+const res2 = nx.list2kv(list1, { indexable: true });
+const res3 = nx.list2kv(list1, { label: 'title', id: 'value' });
 
+
+/*
+// res1
+[
+  { label: 'a', value: 'a' },
+  { label: 'b', value: 'b' },
+  { label: 'c', value: 'c' }
+]
+
+// res2
+[
+  { label: 'a', value: 0 },
+  { label: 'b', value: 1 },
+  { label: 'c', value: 2 }
+]
+
+// res3
+[
+  { title: 'a', value: 'a' },
+  { title: 'b', value: 'b' },
+  { title: 'c', value: 'c' }
+]
+*/
 ```
 
+## license
+Code released under [the MIT license](https://github.com/afeiship/next-list2kv/blob/master/LICENSE.txt).
 
-##resouces:
-+ IonicBubble:
-+ http://codepen.io/rossmartin/pen/XJmpQr
-+ NormalBubble:
-+ http://jsfiddle.net/anuradhabajpai/x8C8S/10/
-+ Ios7Bubble:
-+ http://codepen.io/samuelkraft/pen/Farhl
-+ Ios6Bubble:
-+ http://blog.templatemonster.com/demos/pure-css-chat-bubbles-for-instant-messaging-ui/demo/index.html
+[version-image]: https://img.shields.io/npm/v/@jswork/next-list2kv
+[version-url]: https://npmjs.org/package/@jswork/next-list2kv
+
+[license-image]: https://img.shields.io/npm/l/@jswork/next-list2kv
+[license-url]: https://github.com/afeiship/next-list2kv/blob/master/LICENSE.txt
+
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/next-list2kv
+[size-url]: https://github.com/afeiship/next-list2kv/blob/master/dist/next-list2kv.min.js
+
+[download-image]: https://img.shields.io/npm/dm/@jswork/next-list2kv
+[download-url]: https://www.npmjs.com/package/@jswork/next-list2kv
