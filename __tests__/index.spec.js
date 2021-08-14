@@ -6,7 +6,7 @@
       const list1 = ['a', 'b', 'c'];
       const res1 = nx.list2kv(list1);
       const res2 = nx.list2kv(list1, { indexable: true });
-      const res3 = nx.list2kv(list1, { label: 'title', id: 'value' });
+      const res3 = nx.list2kv(list1, { label: 'title', value: 'id' });
 
       expect(res1).toEqual([
         { label: 'a', value: 'a' },
@@ -21,9 +21,9 @@
       ]);
 
       expect(res3).toEqual([
-        { title: 'a', value: 'a' },
-        { title: 'b', value: 'b' },
-        { title: 'c', value: 'c' }
+        { title: 'a', id: 'a' },
+        { title: 'b', id: 'b' },
+        { title: 'c', id: 'c' }
       ]);
     });
   });

@@ -38,9 +38,9 @@ const res3 = nx.list2kv(list1, { label: 'title', id: 'value' });
 
 // res3
 [
-  { title: 'a', value: 'a' },
-  { title: 'b', value: 'b' },
-  { title: 'c', value: 'c' }
+  { title: 'a', id: 'a' },
+  { title: 'b', id: 'b' },
+  { title: 'c', id: 'c' }
 ]
 */
 ```
