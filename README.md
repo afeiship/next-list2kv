@@ -18,7 +18,7 @@ import '@jswork/next-list2kv';
 const list1 = ['a', 'b', 'c'];
 const res1 = nx.list2kv(list1);
 const res2 = nx.list2kv(list1, { indexable: true });
-const res3 = nx.list2kv(list1, { label: 'title', id: 'value' });
+const res3 = nx.list2kv(list1, { label: 'title', value: 'id' });
 
 
 /*
